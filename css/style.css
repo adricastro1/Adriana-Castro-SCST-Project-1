@@ -13,16 +13,30 @@ body {
 
 header {
     font-size: 35px;
+    margin-bottom: 5vh;
+}
+
+button {
+    padding: 1.5vmin;
+    font-size: 2vmin;
+    border-radius: 1vmin;
+    border: 0.1vmin solid grey;
+    color: rgb(69, 65, 65);
 }
 
 .main {
     display: flex;
     justify-content: space-around;
     gap: 1vh;
-
+    
 }
 
-#side-panel {
+.letter {
+    text-align: center;
+    font-size: 30px;
+}
+
+.side-panel {
     height: 70vh;
     width: 20vh;
     display: flex;
@@ -30,16 +44,18 @@ header {
     justify-content: space-around;
     align-items: center;
     border: 3px grey solid;
+    background-color: rgb(219, 225, 233);
 }
 
-#gameboard {
+.gameboard {
     height: 70vh;
     width: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 3px grey solid;
+    background-color: rgb(219, 225, 233);
 }
 
 #letter-spaces {
@@ -52,9 +68,18 @@ header {
     gap: 1.5vmin;
     margin: auto;
     border: 3px grey solid;
+    background-color: white;
 }
 
 #letter-spaces>div {
     height: 5vmin;
     border-bottom: 3px grey solid;
+}
+
+
+#image {
+    margin-top: 10vh;
+    height: 30vh;
+    width: 50vh;
+    background-color: white;
 }
