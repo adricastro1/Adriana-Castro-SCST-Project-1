@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     height: 100vh;
@@ -16,13 +15,13 @@ header {
     font-size: 35px;
 }
 
-
 .main {
     display: flex;
     justify-content: space-around;
     gap: 1vh;
 
 }
+
 #side-panel {
     height: 70vh;
     width: 20vh;
@@ -48,7 +47,7 @@ header {
     height: 8vh;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(5,8vh);
+    grid-template-columns: repeat(5, 8vh);
     justify-content: center;
     gap: 1.5vmin;
     margin: auto;
