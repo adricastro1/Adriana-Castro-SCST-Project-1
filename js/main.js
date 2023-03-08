@@ -26,6 +26,7 @@ init();
 // initialize function
 function init() {
     keyName = 0;
+    lettersArray = [null];
     render()
 }
 
@@ -42,7 +43,7 @@ function renderGuess(evt) {
             lettersArray.splice(i, 1, guess)
         }
     }
-    correctLetter.innerText = `${lettersArray}`
+    correctLetter.innerText = `${lettersArray.join('')}`
     console.log(lettersArray) 
     render()
 }
