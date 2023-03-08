@@ -28,7 +28,6 @@ button {
     display: flex;
     justify-content: space-around;
     gap: 1vh;
-    
 }
 
 .letter {
@@ -62,22 +61,13 @@ button {
     width: 50vh;
     height: 8vh;
     align-items: center;
-    /* display: flex;
-    grid-template-columns: repeat(5, 8vh);
-    justify-content: center; */
-    gap: 1.5vmin;
     margin: auto;
     border: 3px grey solid;
     background-color: white;
     text-align: center;
     font-size: 30px;
+    padding-top: 12px;
 }
-
-/* #letter-spaces>div {
-    height: 5vmin;
-    border-bottom: 3px grey solid;
-} */
-
 
 #image {
     margin-top: 10vh;

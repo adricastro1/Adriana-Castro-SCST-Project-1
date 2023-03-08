@@ -16,3 +16,11 @@ function renderGame(evt) {
 //     const randomWord = Math.floor(Math.random() * options.length)
 //     return options[randomWord]
 // }
+
+<div id="letter-spaces">
+    <div id="0" class="letter"></div>
+    <div id="1" class="letter"></div>
+    <div id="2" class="letter"></div>
+    <div id="3" class="letter"></div>
+    <div id="4" class="letter"></div>
+</div>
