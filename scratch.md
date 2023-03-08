@@ -17,7 +17,7 @@ function renderGame(evt) {
 //     return options[randomWord]
 // }
 
-<div id="letter-spaces">
+    <div id="letter-spaces">
     <div id="0" class="letter"></div>
     <div id="1" class="letter"></div>
     <div id="2" class="letter"></div>
