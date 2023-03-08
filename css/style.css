@@ -9,11 +9,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(2, 2, 68);
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    gap: 1vh;
 }
 
 header {
-    font-size: 35px;
+    font-family: 'Titan One', cursive;
+    font-size: 65px;
+    color: whitesmoke;
     margin-bottom: 5vh;
+}
+
+img {
+    margin-top: 10vh;
+    height: 30vh;
+    width: 50vh;
+    background-color: rgb(255, 255, 255);
 }
 
 button {
@@ -24,18 +40,12 @@ button {
     color: rgb(69, 65, 65);
 }
 
-.main {
-    display: flex;
-    justify-content: space-around;
-    gap: 1vh;
-}
-
 .letter {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
 }
 
-.side-panel {
+aside {
     height: 70vh;
     width: 20vh;
     display: flex;
@@ -65,13 +75,10 @@ button {
     border: 3px grey solid;
     background-color: white;
     text-align: center;
-    font-size: 30px;
-    padding-top: 12px;
+    font-size: 5vmin;
+    padding-top: 9px;
 }
 
-#image {
-    margin-top: 10vh;
-    height: 30vh;
-    width: 50vh;
-    background-color: white;
+#message, #guesses {
+    font-size: 2vmin;
 }

@@ -29,7 +29,7 @@ init();
 function init() {
     console.log('starting game')
     keyName = 0;
-    correctLetter.innerText = ""
+    lettersArray = [null, null, null, null, null,];
     render()
 }
 
@@ -56,10 +56,6 @@ function renderMessage() {
     // if full word is guessed before 8 guesses render 'you win!'
     // if != full word and 8 max guesses render "try again!"
     if (renderGuess) {
-        guessesEl.innerText = "keep trying!"
+        // guessesEl.innerText = `You have ${} guesses left`
     }
-}
-
-function reset() {
-    console.log('click!')
 }
