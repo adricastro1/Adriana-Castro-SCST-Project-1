@@ -5,11 +5,13 @@ const word = 'comet'
 let guessNum;
 let guess;
 let keyName;
-// let lettersArray = [];
 let remainingLetters = word.length;
 let lettersArray = [null, null, null, null, null,];
+
+
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('#message');
+const guessesEl = document.querySelector('#guesses')
 const playAgainBtn = document.querySelector('button');
 const correctLetter = document.querySelector('#letter-spaces');
 
@@ -25,8 +27,9 @@ init();
 
 // initialize function
 function init() {
+    console.log('starting game')
     keyName = 0;
-    lettersArray = [null];
+    correctLetter.innerText = ""
     render()
 }
 
@@ -41,7 +44,7 @@ function renderGuess(evt) {
     for (let i = 0; i < word.length; i++) {
         if (word[i] === guess) {
             lettersArray.splice(i, 1, guess)
-        }
+        } 
     }
     correctLetter.innerText = `${lettersArray.join('')}`
     console.log(lettersArray) 
@@ -53,6 +56,10 @@ function renderMessage() {
     // if full word is guessed before 8 guesses render 'you win!'
     // if != full word and 8 max guesses render "try again!"
     if (renderGuess) {
-        messageEl.innerText = "keep trying!"
+        guessesEl.innerText = "keep trying!"
     }
+}
+
+function reset() {
+    console.log('click!')
 }
