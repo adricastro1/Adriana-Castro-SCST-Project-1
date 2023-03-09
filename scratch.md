@@ -28,3 +28,12 @@ function renderGame(evt) {
 } else if ((word[i] !== guess) && (remainingLetters !== remainingLetters--) ) {
             remainingTurns--;
         }
+
+        // const images = {
+//     '6': "./imgs/alien5.png",
+//     '5': "./imgs/alien4.png",
+//     '4': "./imgs/alien3.png",
+//     '3': "./imgs/alien2.png",
+//     '2': "./imgs/alien1.png",
+//     '1': "./imgs/alien0.png",
+// }
