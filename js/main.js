@@ -1,12 +1,12 @@
 /*----- constants -----*/
 const word = 'comet'
 const images = {
-    a1: "./imgs/alien1.png",
-    a2: "./imgs/alien2.png",
-    a3: "./imgs/alien3.png",
-    a4: "./imgs/alien4.png",
-    a5: "./imgs/alien5.png",
-    a6: "./imgs/alien6.png",
+    '6': "./imgs/alien5.png",
+    '5': "./imgs/alien4.png",
+    '4': "./imgs/alien3.png",
+    '3': "./imgs/alien2.png",
+    '2': "./imgs/alien1.png",
+    '1': "./imgs/alien0.png",
 }
 
 /*----- state variables -----*/
@@ -22,6 +22,8 @@ const messageEl = document.querySelector('#message');
 const guessesEl = document.querySelector('#guesses')
 const playAgainBtn = document.querySelector('button');
 const correctLetter = document.querySelector('#letter-spaces');
+const img = document.querySelector('img')
+console.log(img)
 
 /*----- event listeners -----*/
 // keyboard event listener
@@ -35,16 +37,18 @@ init();
 
 function init() {
     remainingLetters = word.length;
-    remainingTurns = 8;
+    remainingTurns = 5;
     lettersArray= ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
     correctLetter.innerText = "_ _ _ _ _ _"
     messageEl.innerText = "Don't let the spaceman get taken!"
+
     render()
 }
 
 function render() {
     renderWinner();
     turnsLeft();
+    renderImg();
 }
 
 function renderGuess(evt) {
@@ -71,7 +75,12 @@ function renderWinner() {
 }
 
 function turnsLeft() {
-    if (remainingTurns <= 8 && remainingTurns >= 0) {
-        guessesEl.innerText = `You have ${remainingTurns} turns left`
+    if (remainingTurns <= 6 && remainingTurns >= 0) {
+        guessesEl.innerText = `You have ${remainingTurns} wrong guesses left`
     }
+}
+
+function renderImg() {
+    imgTurn = `./imgs/alien${remainingTurns}.png`
+    img.setAttribute('src', imgTurn)
 }
