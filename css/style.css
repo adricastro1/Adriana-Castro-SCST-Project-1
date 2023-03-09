@@ -16,19 +16,19 @@ body {
 main {
     display: flex;
     justify-content: space-around;
-    gap: 1vh;
+    gap: 2vh;
 }
 
 header {
     font-family: 'Titan One', cursive;
-    font-size: 65px;
+    font-size: 70px;
     color: rgb(231, 227, 227);
     margin-bottom: 5vh;
-    text-shadow: 5px 5px rgb(98, 96, 96);
+    text-shadow: 4px 4px rgb(98, 96, 96);
 }
 
 aside {
-    height: 70vh;
+    height: 65vh;
     width: 25vh;
     display: flex;
     flex-direction: column;
@@ -40,22 +40,23 @@ aside {
 }
 
 img {
-    margin-top: 10vh;
+    margin-top: 6vh;
     height: 40vh;
     width: 45vh;
     border-radius: 15px;
 }
 
 button {
-    padding: 1.5vmin;
-    font-size: 2vmin;
+    padding: 2vmin;
+    font-size: 2.5vmin;
     border-radius: 1vmin;
     border: 0.1vmin solid grey;
     color: rgb(69, 65, 65);
+    box-shadow: 3px 3px grey;
 }
 
 .gameboard {
-    height: 70vh;
+    height: 65vh;
     width: 55vh;
     display: flex;
     flex-direction: column;

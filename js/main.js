@@ -58,7 +58,7 @@ function renderGuess(evt) {
         }
         correctLetter.innerText = `${lettersArray.join('')}`
     }
-        remainingTurns--;
+    if (!word.includes(guess)) remainingTurns--;
     render()
 }
 
