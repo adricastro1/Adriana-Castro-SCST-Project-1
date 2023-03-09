@@ -15,4 +15,4 @@ Technologies Used: JAvascript, HTML, CSS
 Getting Started: 
 
 Next Steps:
-
+- 

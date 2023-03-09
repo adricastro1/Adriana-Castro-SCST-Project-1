@@ -21,8 +21,20 @@ main {
 header {
     font-family: 'Titan One', cursive;
     font-size: 65px;
-    color: whitesmoke;
+    color: rgb(231, 227, 227);
     margin-bottom: 5vh;
+}
+
+aside {
+    height: 70vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px grey solid;
+    border-radius: 15px;
+    background-color: rgb(219, 225, 233);
 }
 
 img {
@@ -40,22 +52,6 @@ button {
     color: rgb(69, 65, 65);
 }
 
-.letter {
-    text-align: center;
-    font-size: 35px;
-}
-
-aside {
-    height: 70vh;
-    width: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 3px grey solid;
-    background-color: rgb(219, 225, 233);
-}
-
 .gameboard {
     height: 70vh;
     width: 60vh;
@@ -64,7 +60,13 @@ aside {
     justify-content: center;
     align-items: center;
     border: 3px grey solid;
+    border-radius: 15px;
     background-color: rgb(219, 225, 233);
+}
+
+.letter {
+    text-align: center;
+    font-size: 35px;
 }
 
 #letter-spaces {
@@ -73,6 +75,7 @@ aside {
     align-items: center;
     margin: auto;
     border: 3px grey solid;
+    border-radius: 15px;
     background-color: white;
     text-align: center;
     font-size: 5vmin;
