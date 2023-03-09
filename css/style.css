@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(/imgs/space.jpg);
     background-color: rgb(2, 2, 68);
 }
 
@@ -23,11 +24,12 @@ header {
     font-size: 65px;
     color: rgb(231, 227, 227);
     margin-bottom: 5vh;
+    text-shadow: 5px 5px rgb(98, 96, 96);
 }
 
 aside {
     height: 70vh;
-    width: 20vh;
+    width: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -39,9 +41,9 @@ aside {
 
 img {
     margin-top: 10vh;
-    height: 30vh;
-    width: 50vh;
-    background-color: rgb(255, 255, 255);
+    height: 40vh;
+    width: 45vh;
+    border-radius: 15px;
 }
 
 button {
@@ -54,7 +56,7 @@ button {
 
 .gameboard {
     height: 70vh;
-    width: 60vh;
+    width: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +72,7 @@ button {
 }
 
 #letter-spaces {
-    width: 50vh;
+    width: 45vh;
     height: 8vh;
     align-items: center;
     margin: auto;
@@ -83,5 +85,7 @@ button {
 }
 
 #message, #guesses {
-    font-size: 2vmin;
+    font-size: 2.5vmin;
+    text-align: center;
+    padding: 0 2vmin;
 }

@@ -1,5 +1,13 @@
 /*----- constants -----*/
 const word = 'comet'
+const images = {
+    a1: "./imgs/alien1.png",
+    a2: "./imgs/alien2.png",
+    a3: "./imgs/alien3.png",
+    a4: "./imgs/alien4.png",
+    a5: "./imgs/alien5.png",
+    a6: "./imgs/alien6.png",
+}
 
 /*----- state variables -----*/
 let guess;
@@ -25,13 +33,12 @@ playAgainBtn.addEventListener('click', init)
 /*----- functions -----*/
 init();
 
-// initialize function
 function init() {
     remainingLetters = word.length;
     remainingTurns = 8;
     lettersArray= ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
     correctLetter.innerText = "_ _ _ _ _ _"
-    messageEl.innerText = "KEEP TRYING!"
+    messageEl.innerText = "Don't let the spaceman get taken!"
     render()
 }
 
@@ -42,7 +49,7 @@ function render() {
 
 function renderGuess(evt) {
     const keyName = evt.key;
-    let guess = keyName
+    let guess = keyName.toLowerCase()
     console.log(guess)
     for (let i = 0; i < word.length; i++) {
         if (word[i] === guess) {
@@ -56,7 +63,7 @@ function renderGuess(evt) {
 }
 
 function renderWinner() {
-    if (remainingLetters == 0) {
+    if (remainingLetters == 0 ) {
         messageEl.innerText = `YOU WON!`
     } else if (remainingTurns == 0 && remainingLetters >= 1) {
         messageEl.innerText = "YOU LOSE"
