@@ -24,3 +24,7 @@ function renderGame(evt) {
     <div id="3" class="letter"></div>
     <div id="4" class="letter"></div>
 </div>
+
+} else if ((word[i] !== guess) && (remainingLetters !== remainingLetters--) ) {
+            remainingTurns--;
+        }

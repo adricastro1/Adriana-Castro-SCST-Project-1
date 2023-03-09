@@ -2,12 +2,11 @@
 const word = 'comet'
 
 /*----- state variables -----*/
-let guessNum;
 let guess;
 let keyName;
-let remainingLetters = word.length;
-let remainingTurns = 6;
-let lettersArray = ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
+let remainingLetters 
+let remainingTurns;
+let lettersArray = [];
 
 
 /*----- cached elements  -----*/
@@ -28,14 +27,17 @@ init();
 
 // initialize function
 function init() {
-    console.log('starting game')
-    keyName = 0;
-    lettersArray = ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
+    remainingLetters = word.length;
+    remainingTurns = 8;
+    lettersArray= ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
+    correctLetter.innerText = "_ _ _ _ _ _"
+    messageEl.innerText = "KEEP TRYING!"
     render()
 }
 
 function render() {
-    renderMessage();
+    renderWinner();
+    turnsLeft();
 }
 
 function renderGuess(evt) {
@@ -46,26 +48,23 @@ function renderGuess(evt) {
         if (word[i] === guess) {
             lettersArray.splice(i, 1, guess)
             remainingLetters--;
-        } 
-        else if {
-            remainingTurns--;
         }
+        correctLetter.innerText = `${lettersArray.join('')}`
     }
-    correctLetter.innerText = `${lettersArray.join('')}`
-    console.log(lettersArray) 
-    console.log(remainingLetters)
+        remainingTurns--;
     render()
 }
 
-
-function renderMessage() {
+function renderWinner() {
     if (remainingLetters == 0) {
         messageEl.innerText = `YOU WON!`
-    } else if (remainingLetters >= 1){
-        messageEl.innerText = "" 
-    } 
+    } else if (remainingTurns == 0 && remainingLetters >= 1) {
+        messageEl.innerText = "YOU LOSE"
+    }
 }
 
 function turnsLeft() {
-    guessesEl.innerText = `You have ${remainingTurns} turns left`
+    if (remainingTurns <= 8 && remainingTurns >= 0) {
+        guessesEl.innerText = `You have ${remainingTurns} turns left`
+    }
 }
