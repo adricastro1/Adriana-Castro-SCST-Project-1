@@ -61,9 +61,9 @@ function renderGuess(evt) {
 
 function renderWinner() {
     if (remainingLetters == 0) {
-        messageEl.innerText = `YOU WIN!`
+        messageEl.innerText = `Congrats! You saved the spaceman!`
     } else if (remainingTurns == 0 && remainingLetters >= 1) {
-        messageEl.innerText = "YOU LOSE"
+        messageEl.innerText = "Oh no! The aliens took him!"
     }
 }
 
