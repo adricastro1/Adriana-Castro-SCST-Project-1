@@ -1,12 +1,11 @@
 /*----- constants -----*/
 const word = 'comet'
-const images = ["./imgs/alien0.png", "./imgs/alien1.png", "./imgs/alien2.png", "./imgs/alien3.png", "./imgs/alien4.png", "./imgs/alien5.png"
-]
+const images = ["./imgs/alien0.png", "./imgs/alien1.png", "./imgs/alien2.png", "./imgs/alien3.png", "./imgs/alien4.png", "./imgs/alien5.png"]
 
 /*----- state variables -----*/
 let guess;
 let keyName;
-let remainingLetters
+let remainingLetters;
 let remainingTurns;
 let lettersArray = [];
 let usedLetters = [];
@@ -55,7 +54,6 @@ function renderGuess(evt) {
     }
     usedLetters.push(guess)
     if (!word.includes(guess)) remainingTurns--;
-    console.log(remainingLetters)
     render()
 }
 
@@ -63,10 +61,9 @@ function renderWinner() {
     if (remainingLetters == 0) {
         messageEl.innerText = `Congrats! You saved the spaceman!`
     } else if (remainingTurns == 0 && remainingLetters >= 1) {
-        messageEl.innerText = "Oh no! The aliens took him!"
+        messageEl.innerText = "Oh no! The aliens took him..."
     }
 }
-console.log(images[0])
 
 function turnsLeft() {
     if (remainingTurns <= 6 && remainingTurns >= 0) {
