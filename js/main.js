@@ -66,11 +66,11 @@ function renderWinner() {
         messageEl.innerText = "Oh no! The aliens took him!"
     }
 }
+console.log(images[0])
 
 function turnsLeft() {
     if (remainingTurns <= 6 && remainingTurns >= 0) {
         guessesEl.innerText = `You have ${remainingTurns} wrong guesses left`
-        imgTurn = `./imgs/alien${remainingTurns}.png`
-        img.setAttribute('src', imgTurn)
+        img.setAttribute('src', images[remainingTurns])
     }
 }
