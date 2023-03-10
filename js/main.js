@@ -1,5 +1,7 @@
 /*----- constants -----*/
 const word = 'comet'
+const images = ["./imgs/alien0.png", "./imgs/alien1.png", "./imgs/alien2.png", "./imgs/alien3.png", "./imgs/alien4.png", "./imgs/alien5.png"
+]
 
 /*----- state variables -----*/
 let guess;
@@ -7,6 +9,7 @@ let keyName;
 let remainingLetters
 let remainingTurns;
 let lettersArray = [];
+let usedLetters = [];
 
 
 /*----- cached elements  -----*/
@@ -28,8 +31,9 @@ function init() {
     remainingLetters = word.length;
     remainingTurns = 5;
     lettersArray = ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
-    correctLetter.innerText = "_ _ _ _ _ _"
+    correctLetter.innerText = "_  _  _  _  _  _"
     messageEl.innerText = "Don't let the spaceman get abducted!"
+    usedLetters = [''];
 
     render()
 }
@@ -43,19 +47,21 @@ function renderGuess(evt) {
     const keyName = evt.key;
     let guess = keyName.toLowerCase()
     for (let i = 0; i < word.length; i++) {
-        if (word[i] === guess) {
+        if (word[i] === guess && !usedLetters.includes(guess)) {
             lettersArray.splice(i, 1, guess)
             remainingLetters--;
         }
         correctLetter.innerText = `${lettersArray.join(' ')}`
     }
+    usedLetters.push(guess)
     if (!word.includes(guess)) remainingTurns--;
+    console.log(remainingLetters)
     render()
 }
 
 function renderWinner() {
     if (remainingLetters == 0) {
-        messageEl.innerText = `YOU WON!`
+        messageEl.innerText = `YOU WIN!`
     } else if (remainingTurns == 0 && remainingLetters >= 1) {
         messageEl.innerText = "YOU LOSE"
     }
