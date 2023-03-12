@@ -1,5 +1,4 @@
 /*----- constants -----*/
-// const word = 'comet'
 const options = ['comet', 'orbit', 'pluto', 'alien']
 const images = ["./imgs/alien0.png", "./imgs/alien1.png", "./imgs/alien2.png", "./imgs/alien3.png", "./imgs/alien4.png", "./imgs/alien5.png"]
 
@@ -32,9 +31,9 @@ function init() {
     remainingLetters = word.length;
     remainingTurns = 5;
     lettersArray = ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
+    usedLetters = [''];
     correctLetter.innerText = "_  _  _  _  _  _"
     messageEl.innerText = "Don't let the spaceman get abducted!"
-    usedLetters = [''];
     render()
 }
 
@@ -58,8 +57,8 @@ function renderGuess(evt) {
         }
         correctLetter.innerText = `${lettersArray.join(' ')}`
     }
+    if (!word.includes(guess) && !usedLetters.includes(guess)) remainingTurns--;
     usedLetters.push(guess)
-    if (!word.includes(guess)) remainingTurns--;
     render()
 }
 
