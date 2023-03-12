@@ -1,14 +1,15 @@
 /*----- constants -----*/
-const word = 'comet'
+// const word = 'comet'
+const options = ['comet', 'orbit', 'pluto', 'alien']
 const images = ["./imgs/alien0.png", "./imgs/alien1.png", "./imgs/alien2.png", "./imgs/alien3.png", "./imgs/alien4.png", "./imgs/alien5.png"]
 
 /*----- state variables -----*/
 let guess;
-let keyName;
 let remainingLetters;
 let remainingTurns;
 let lettersArray = [];
 let usedLetters = [];
+let word;
 
 
 /*----- cached elements  -----*/
@@ -27,19 +28,24 @@ playAgainBtn.addEventListener('click', init)
 init();
 
 function init() {
+    word = chooseWord();
     remainingLetters = word.length;
     remainingTurns = 5;
     lettersArray = ['_ ', ' _ ', ' _ ', ' _ ', ' _',];
     correctLetter.innerText = "_  _  _  _  _  _"
     messageEl.innerText = "Don't let the spaceman get abducted!"
     usedLetters = [''];
-
     render()
 }
 
 function render() {
     renderWinner();
     turnsLeft();
+}
+
+function chooseWord() {
+    const currentWord = Math.floor(Math.random() * options.length)
+    return options[currentWord]
 }
 
 function renderGuess(evt) {

@@ -3,7 +3,7 @@ function renderGame(evt) {
     const lettersArray = currentWord.split('')
     console.log(lettersArray)
 
-    
+
     lettersArray.forEach(function (letter, idx) {
         const letterId = `${idx}`
         const letterEl = document.getElementById(letterId)
@@ -39,3 +39,11 @@ function renderGame(evt) {
 //     '2': "./imgs/alien1.png",
 //     '1': "./imgs/alien0.png",
 // }
+function chooseWord() {
+    const options = ['comet', 'orbit', 'pluto']
+    const randomWord = Math.floor(Math.random() * options.length)
+    return options[randomWord]
+}
+
+chooseWord()
+console.log(randomWord)
