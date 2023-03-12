@@ -4,7 +4,7 @@ Game's Title: Spaceman
 - Guess the word before the spaceman is abducted by aliens!
 
 Screenshots:
-
+![Spaceman](./imgs/game_screenshot.png)
 
 Technologies Used: JAvascript, HTML, CSS
 
